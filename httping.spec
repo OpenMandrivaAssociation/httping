@@ -1,6 +1,6 @@
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	1.2.4
+Version:	1.2.5
 Release:	%mkrel 1
 Group:		System/Base
 License:	GPL
