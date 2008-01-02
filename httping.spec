@@ -9,6 +9,7 @@ Source0:	http://www.vanheusden.com/httping/httping-%{version}.tgz
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
 BuildRequires:	pkgconfig
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 httping is a "ping"-like tool for HTTP requests. Give it a URL and it will show
