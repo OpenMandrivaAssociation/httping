@@ -1,6 +1,6 @@
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	1.2.5
+Version:	1.2.8
 Release:	%mkrel 1
 Group:		System/Base
 License:	GPL
@@ -9,7 +9,7 @@ Source0:	http://www.vanheusden.com/httping/httping-%{version}.tgz
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
 BuildRequires:	pkgconfig
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 httping is a "ping"-like tool for HTTP requests. Give it a URL and it will show
