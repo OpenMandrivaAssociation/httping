@@ -1,7 +1,7 @@
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
 Version:	1.2.9
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Base
 License:	GPL
 URL:		http://www.vanheusden.com/httping/
@@ -29,7 +29,7 @@ latency).
 %install
 rm -rf %{buildroot}
 
-install -d %{buildroot}%{_bindir
+install -d %{buildroot}%{_bindir}
 install -d %{buildroot}%{_mandir}/man1
 
 install -m0755 httping %{buildroot}%{_bindir}/httping
