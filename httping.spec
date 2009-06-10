@@ -6,6 +6,8 @@ Group:		System/Base
 License:	GPL+ and OpenSSL
 URL:		http://www.vanheusden.com/httping/
 Source0:	http://www.vanheusden.com/httping/httping-%{version}.tgz
+# patch from fedora, fixes strndup build error on x86_64 - 10Jun2009
+Patch0:		httping-strndup.patch
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
 BuildRequires:	pkgconfig
@@ -20,6 +22,7 @@ latency).
 %prep
 
 %setup -q -n %{name}-%{version}
+%patch0 -p1
 
 %build
 %serverbuild
