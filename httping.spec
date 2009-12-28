@@ -1,13 +1,11 @@
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	1.3.1
+Version:	1.4.0
 Release:	%mkrel 1
 Group:		System/Base
 License:	GPL+ and OpenSSL
 URL:		http://www.vanheusden.com/httping/
 Source0:	http://www.vanheusden.com/httping/httping-%{version}.tgz
-# fix strndup build error on x86_64 - 10Jun2009
-Patch0:		httping-1.3.0-fix-strndup-conflict.patch
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
 BuildRequires:	pkgconfig
@@ -22,12 +20,11 @@ latency).
 %prep
 
 %setup -q -n %{name}-%{version}
-%patch0 -p1 -b .strndup
 
 %build
 %serverbuild
 
-%make
+%make OFLAGS="-D_GNU_SOURCE"
 
 %install
 rm -rf %{buildroot}
