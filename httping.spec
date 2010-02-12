@@ -1,9 +1,9 @@
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	1.4.0
+Version:	1.4.1
 Release:	%mkrel 1
 Group:		System/Base
-License:	GPL+ and OpenSSL
+License:	GPLv2+ 
 URL:		http://www.vanheusden.com/httping/
 Source0:	http://www.vanheusden.com/httping/httping-%{version}.tgz
 BuildRequires:	openssl-devel
