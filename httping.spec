@@ -1,7 +1,7 @@
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	1.4.1
-Release:	%mkrel 3
+Version:	1.4.4
+Release:	%mkrel 1
 Group:		System/Base
 License:	GPLv2+ 
 URL:		http://www.vanheusden.com/httping/
