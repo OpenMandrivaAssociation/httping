@@ -1,15 +1,13 @@
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	1.4.4
-Release:	%mkrel 1
+Version:	1.5.4
+Release:	1
 Group:		System/Base
 License:	GPLv2+ 
 URL:		http://www.vanheusden.com/httping/
 Source0:	http://www.vanheusden.com/httping/httping-%{version}.tgz
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
-BuildRequires:	pkgconfig
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 httping is a "ping"-like tool for HTTP requests. Give it a URL and it will show
@@ -19,10 +17,10 @@ latency).
 
 %prep
 
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
-%serverbuild
+%setup_compile_flags
 
 %make OFLAGS="-D_GNU_SOURCE"
 
@@ -34,9 +32,6 @@ install -d %{buildroot}%{_mandir}/man1
 
 install -m0755 httping %{buildroot}%{_bindir}/httping
 install -m0644 httping.1 %{buildroot}%{_mandir}/man1/httping.1
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
