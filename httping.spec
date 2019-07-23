@@ -1,7 +1,7 @@
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	1.5.6
-Release:	2
+Version:	2.5
+Release:	1
 Group:		System/Base
 License:	GPLv2+ 
 URL:		http://www.vanheusden.com/httping/
