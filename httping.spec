@@ -13,6 +13,7 @@ BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(fftw3)
+BuildRequires:	gettext
 BuildSystem:	cmake
 
 %description
