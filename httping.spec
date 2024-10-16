@@ -7,7 +7,7 @@ Version:	3.6
 Release:	1
 Group:		System/Base
 License:	GPL-3.0
-URL:		http://www.vanheusden.com/httping/
+URL:		https://www.vanheusden.com/httping/
 Source0:	https://github.com/folkertvanheusden/HTTPing/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(zlib)
