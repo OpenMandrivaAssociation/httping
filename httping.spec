@@ -3,7 +3,7 @@
 
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	3.6
+Version:	4.2.0
 Release:	1
 Group:		System/Base
 License:	GPL-3.0
@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(fftw3)
 BuildRequires:	gettext
 BuildSystem:	cmake
+BuildOption:	-DUSE_GETTEXT:BOOL=ON
 
 %description
 httping is a "ping"-like tool for HTTP requests. Give it a URL and it will show
@@ -29,9 +30,9 @@ latency).
 cd _OMV_rpm_build
 mkdir -p %{buildroot}%{_bindir}
 mv httping %{buildroot}%{_bindir}/
-for i in *.mo; do
-	mkdir -p %{buildroot}%{_datadir}/locale/$(basename $i .mo)/LC_MESSAGES
-	mv $i %{buildroot}%{_datadir}/locale/$(basename $i .mo)/LC_MESSAGES/httping.mo
+for i in *.gmo; do
+	mkdir -p %{buildroot}%{_datadir}/locale/$(basename $i .gmo)/LC_MESSAGES
+	mv $i %{buildroot}%{_datadir}/locale/$(basename $i .gmo)/LC_MESSAGES/httping.mo
 done
 cd ..
 
