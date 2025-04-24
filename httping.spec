@@ -3,7 +3,7 @@
 
 Summary:	A "ping"-like tool for HTTP requests
 Name:		httping
-Version:	4.2.0
+Version:	4.4.0
 Release:	1
 Group:		System/Base
 License:	GPL-3.0
@@ -30,7 +30,7 @@ latency).
 cd _OMV_rpm_build
 mkdir -p %{buildroot}%{_bindir}
 mv httping %{buildroot}%{_bindir}/
-for i in *.gmo; do
+for i in po/*.gmo; do
 	mkdir -p %{buildroot}%{_datadir}/locale/$(basename $i .gmo)/LC_MESSAGES
 	mv $i %{buildroot}%{_datadir}/locale/$(basename $i .gmo)/LC_MESSAGES/httping.mo
 done
